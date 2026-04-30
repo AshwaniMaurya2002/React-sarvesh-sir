@@ -9,3 +9,11 @@ function demo() {
 }
 
 export { greet, demo };
+
+//! default Export
+
+function start() {
+  console.log("i am the starting function");
+}
+
+export default start;
