@@ -1,5 +1,4 @@
 //! Named funciton
-
 function greet() {
   console.log("i am greet");
 }
