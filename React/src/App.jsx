@@ -1,12 +1,15 @@
 import React, { use } from "react";
-import StatesInFBC from "./allTopics/02_states/StatesInFBC";
-// import ClassBased from "./allTopics/01_Types-of-components/ClassBased";
+import CallbackParent from "./05_Callback/CallbackParent";
+import UpliftingParent from "./06_stateUplifting/UpliftingParent";
+// import DrillingParent from "./04_props Drilling/DrillingParent";
 
 const App = () => {
   return (
     <>
-      {/* <ClassBased /> */}
-      <StatesInFBC />
+      {/* <DrillingParent /> */}
+      {/* <CallbackParent />
+       */}
+      <UpliftingParent />
     </>
   );
 };
