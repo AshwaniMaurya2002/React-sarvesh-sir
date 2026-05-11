@@ -1,4 +1,5 @@
 import React from "react";
+import "./Employee.css";
 
 const Employee = () => {
   const employeesData = {
@@ -2140,7 +2141,17 @@ const Employee = () => {
   };
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "20px",
+        padding: "24px",
+        backgroundColor: "#f4f5f7",
+        border: "3px solid #0f43c7",
+        minHeight: "100vh",
+      }}
+    >
       {employeesData.users.map((employee) => (
         <div key={employee.id} className="employee-container">
           <img src={employee.image} alt={employee.firstName} />
@@ -2158,7 +2169,7 @@ const Employee = () => {
           <p>Network: {employee.crypto.network}</p>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
