@@ -2153,6 +2153,9 @@ const Employee = () => {
           <p>Bank Currency: {employee.bank.currency}</p>
           <p>Company: {employee.company.name}</p>
           <p>Department: {employee.company.department}</p>
+          <p>Role: {employee.role}</p>
+          <p>Gender: {employee.gender}</p>
+          <p>Network: {employee.crypto.network}</p>
         </div>
       ))}
     </>
