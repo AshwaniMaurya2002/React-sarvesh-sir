@@ -2142,12 +2142,17 @@ const Employee = () => {
   return (
     <>
       {employeesData.users.map((employee) => (
-        <div key={employee.id}>
+        <div key={employee.id} className="employee-container">
+          <img src={employee.image} alt={employee.firstName} />
           <h2>
             {employee.firstName} {employee.lastName}
           </h2>
           <p>Email: {employee.email}</p>
           <p>Phone: {employee.phone}</p>
+          <p>City: {employee.address.city}</p>
+          <p>Bank Currency: {employee.bank.currency}</p>
+          <p>Company: {employee.company.name}</p>
+          <p>Department: {employee.company.department}</p>
         </div>
       ))}
     </>
