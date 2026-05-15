@@ -1,5 +1,7 @@
 import React, { use } from "react";
-import ControlledForm2 from "./allTopics/08- Forms/ControlledForm2";
+import InlineCss from "./09_ReactCss/InlineCss";
+import Card from "./09_ReactCss/Card";
+// import ControlledForm2 from "./allTopics/08- Forms/ControlledForm2";
 // import Employee from "./07_list/Employee";
 // import UserList from "./07_list/UserList";
 // import CallbackParent from "./05_Callback/CallbackParent";
@@ -15,7 +17,9 @@ const App = () => {
       {/* <UpliftingParent /> */}
       {/* <Employee /> */}
       {/* <UserList /> */}
-      <ControlledForm2 />
+      {/* <ControlledForm2 /> */}
+      {/* <InlineCss /> */}
+      <Card />
     </>
   );
 };
