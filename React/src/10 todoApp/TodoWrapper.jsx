@@ -1,14 +1,16 @@
-import React, { useState } from "react";
 import style from "./TodoWrapper.module.css";
 import CreateTodo from "./CreateTodo/CreateTodo";
 import DisplayTodo from "./DisplayTodo/DisplayTodo";
+import { useState } from "react";
 
 const TodoWrapper = () => {
   const [todo, setTodo] = useState("");
-  const [allTodo, setAllTodo] = useState(() => {
+  const [allTodos, setAllTodos] = useState(() => {
     let todos = localStorage.getItem("todos");
     return todos ? JSON.parse(todos) : [];
   });
+
+  console.log(allTodos);
 
   const handleCreateTodo = (e) => {
     e.preventDefault();
@@ -21,14 +23,13 @@ const TodoWrapper = () => {
 
     console.log(newTodo);
 
-    //? persisting new todos in local storage
+    //! persisting new todos in localstorage
     const todos = JSON.parse(localStorage.getItem("todos")) || [];
     todos.push(newTodo);
     localStorage.setItem("todos", JSON.stringify(todos));
-    setAllTodo(todos);
+    setAllTodos(todos);
 
-    //! clear input
-    setTodo("");
+    setTodo(""); //clearing input
   };
 
   return (
@@ -39,7 +40,7 @@ const TodoWrapper = () => {
         setTodo={setTodo}
         handleCreateTodo={handleCreateTodo}
       />
-      <DisplayTodo />
+      <DisplayTodo allTodos={allTodos} />
     </main>
   );
 };

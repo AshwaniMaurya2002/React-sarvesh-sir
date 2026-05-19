@@ -1,10 +1,17 @@
-import React from "react";
 import style from "./DisplayTodo.module.css";
 
-const DisplayTodo = () => {
+const DisplayTodo = ({ allTodos }) => {
   return (
-    <div>
-      <h1>Display Todo</h1>
+    <div className={style.todoContainer}>
+      {allTodos.length === 0 ? (
+        <h2>No Todos Available</h2>
+      ) : (
+        allTodos.map((todo) => (
+          <div key={todo.id} className={style.todoCard}>
+            <p>{todo.text}</p>
+          </div>
+        ))
+      )}
     </div>
   );
 };

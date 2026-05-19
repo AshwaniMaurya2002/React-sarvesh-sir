@@ -1,0 +1,20 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.todoCard {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todoCard p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
