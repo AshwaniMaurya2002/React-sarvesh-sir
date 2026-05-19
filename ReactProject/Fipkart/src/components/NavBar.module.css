@@ -1,0 +1,295 @@
+/* ── Wrapper ── */
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* ── Row 1: Logo + sub-nav + address + coins ── */
+.topRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 6px;
+  gap: 8px;
+}
+
+/* Logo */
+.logoPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #2874f0;
+  border-radius: 4px;
+  padding: 6px 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: none;
+}
+
+.logoText {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.logoPlus {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logoExplore {
+  color: #ffe500;
+  font-size: 8px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.logoPlusBadge {
+  color: #ffe500;
+  font-size: 9px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Sub-nav pills */
+.subNav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.subPill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  transition: border-color 0.15s;
+}
+
+.subPill:hover {
+  border-color: #2874f0;
+}
+
+.subPillIcon {
+  display: flex;
+  align-items: center;
+}
+
+.subPillExtra {
+  font-size: 9px;
+  color: #4caf50;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Address */
+.address {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.addressLabel {
+  font-weight: 700;
+  color: #333;
+  font-size: 12px;
+}
+
+.addressText {
+  color: #555;
+  font-size: 12px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Coins */
+.coins {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff3e0;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #e65100;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Row 2: Search ── */
+.searchRow {
+  padding: 6px 20px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #2874f0;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 40px;
+  width: 100%;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 14px;
+  font-size: 14px;
+  color: #333;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+.searchBtn {
+  background: #fff;
+  border: none;
+  border-left: 1.5px solid #2874f0;
+  cursor: pointer;
+  padding: 0 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2874f0;
+  transition: background 0.15s;
+}
+
+.searchBtn:hover {
+  background: #f0f4ff;
+}
+
+/* ── Row 3: Account / More / Cart ── */
+.rightNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 0 20px 6px;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.navBtn:hover {
+  color: #2874f0;
+}
+
+.cartBtn {
+  align-items: flex-start;
+}
+
+.cartBadge {
+  background: #ff6161;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+  margin-top: -10px;
+}
+
+/* ── Row 4: Category strip ── */
+.categoryStrip {
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 0 8px;
+}
+
+.categoryStrip::-webkit-scrollbar {
+  display: none;
+}
+
+.catBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 14px 8px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  flex-shrink: 0;
+  min-width: 68px;
+  transition: border-color 0.15s;
+}
+
+.catBtn:hover {
+  border-bottom-color: #2874f0;
+}
+
+.catBtn.active {
+  border-bottom-color: #2874f0;
+}
+
+.catIcon {
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catBtn.active .catIcon {
+  color: #2874f0;
+}
+
+.catLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.catBtn.active .catLabel {
+  color: #2874f0;
+  font-weight: 700;
+}
