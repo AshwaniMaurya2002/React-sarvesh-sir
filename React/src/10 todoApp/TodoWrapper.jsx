@@ -10,11 +10,28 @@ const TodoWrapper = () => {
     return todos ? JSON.parse(todos) : [];
   });
 
+  const [editTodoId, setEditTodoID] = useState(null);
+
   console.log(allTodos);
 
   const handleCreateTodo = (e) => {
     e.preventDefault();
     console.log("Todo Created");
+
+    if (editTodoId) {
+      const updateTodos = allTodos.map((ele) => {
+        if (ele.id === editTodoId) {
+          return { ...ele, text: todo.trim() };
+        }
+        return ele;
+      });
+
+      setAllTodos(updateTodos);
+      localStorage.setItem("todos", JSON.stringify(updateTodos));
+      setTodo(" ");
+      setEditTodoID(null);
+      return;
+    }
 
     let newTodo = {
       id: Date.now(),
@@ -29,7 +46,21 @@ const TodoWrapper = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
     setAllTodos(todos);
 
-    setTodo(""); //clearing input
+    setTodo(" "); //clearing input
+  };
+
+  const handleDeleteTodo = (id) => {
+    let todos = [...allTodos];
+    let filteredTodos = todos.filter((ele) => ele.id !== id);
+    setAllTodos(filteredTodos);
+    localStorage.setItem("todos", JSON.stringify(filteredTodos));
+  };
+
+  const handleEditTodo = (id) => {
+    const todos = [...allTodos];
+    const todoToBeEdited = todos.find((ele) => ele.id === id);
+    setTodo(todoToBeEdited.text);
+    setEditTodoID(id);
   };
 
   return (
@@ -39,8 +70,13 @@ const TodoWrapper = () => {
         todo={todo}
         setTodo={setTodo}
         handleCreateTodo={handleCreateTodo}
+        editTodoId={editTodoId}
       />
-      <DisplayTodo allTodos={allTodos} />
+      <DisplayTodo
+        allTodos={allTodos}
+        handleDeleteTodo={handleDeleteTodo}
+        handleEditTodo={handleEditTodo}
+      />
     </main>
   );
 };
