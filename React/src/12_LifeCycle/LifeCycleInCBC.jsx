@@ -7,7 +7,6 @@ export default class LifeCycleInCBC extends Component {
     this.state = { count: 8345365982359 };
   }
   increment = () => this.setState({ count: this.state.count + 1 });
-
   componentDidMount() {
     console.log("I am componentDidMount");
     this.intervalId = setInterval(() => {
