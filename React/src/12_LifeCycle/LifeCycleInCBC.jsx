@@ -6,7 +6,6 @@ export default class LifeCycleInCBC extends Component {
     console.log("I am Constructor");
     this.state = { count: 8345365982359 };
   }
-
   increment = () => this.setState({ count: this.state.count + 1 });
 
   componentDidMount() {
