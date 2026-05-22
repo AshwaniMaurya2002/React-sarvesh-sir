@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 const LifeCycleInFBC = () => {
   const [count, setCount] = useState(0);
   const [intialRender, setintialRender] = useState(true);
