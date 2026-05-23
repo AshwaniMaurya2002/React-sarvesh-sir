@@ -5,7 +5,6 @@ const LifeCycleInFBC = () => {
   useEffect(() => {
     console.log("Component Mounted");
   }, []);
-
   useEffect(() => {
     if (intialRender) {
       setintialRender(false);
