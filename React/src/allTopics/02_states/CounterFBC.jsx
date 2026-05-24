@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-
 const CounterFBC = () => {
   const [state, setState] = useState({ count: 0 });
   console.log(state);
