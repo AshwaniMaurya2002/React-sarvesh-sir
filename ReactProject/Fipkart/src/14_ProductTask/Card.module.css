@@ -2,22 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  padding: 30px;
-  background-color: #f4f4f4;
-  min-height: 100vh;
-}
-
-.header {
-  text-align: center;
+  gap: 20px;
   padding: 20px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-  margin: 0;
-  color: #333;
+  background-color: #ececec;
 }
 
 .card {
@@ -27,17 +14,15 @@
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: all 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .topSection {
   position: relative;
-  height: 230px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,58 +31,55 @@
 
 .heart {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 35px;
-  height: 35px;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .productImage {
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   object-fit: contain;
 }
 
 .content {
-  padding: 18px;
+  padding: 16px;
 }
 
 .title {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   color: #222;
-  margin-bottom: 8px;
 }
 
 .tags {
   display: flex;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .tag {
-  font-size: 12px;
-  border: 1px solid #ddd;
-  padding: 4px 9px;
-  border-radius: 20px;
-  color: #555;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #666;
 }
 
 .description {
-  margin-top: 12px;
+  margin-top: 14px;
   font-size: 14px;
   line-height: 1.5;
-  color: #666;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  color: #777;
+  height: 60px;
   overflow: hidden;
 }
 
@@ -110,28 +92,24 @@
 
 .priceLabel {
   font-size: 11px;
+  text-transform: uppercase;
   color: #999;
-  margin: 0;
 }
 
 .price {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   color: #222;
-  margin: 0;
 }
 
 .button {
   background: #6c5ce7;
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 10px 18px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 14px;
 }
-
-/* ============= Popup ============= */
 
 .popupOverlay {
   position: fixed;
@@ -139,99 +117,63 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
 
 .popup {
-  width: 720px;
-  background: #fff;
-  border-radius: 20px;
+  width: 800px;
+  background: white;
+  border-radius: 15px;
   padding: 30px;
   display: flex;
-  gap: 35px;
+  gap: 30px;
   position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .closeBtn {
   position: absolute;
   top: 15px;
-  right: 20px;
-  font-size: 28px;
-  background: none;
+  right: 15px;
   border: none;
+  background: transparent;
+  font-size: 24px;
   cursor: pointer;
 }
 
 .left img {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
+  width: 280px;
 }
 
-.right {
-  flex: 1;
-}
-
-.popupTitle {
-  font-size: 36px;
-  margin: 0 0 8px 0;
+.right h1 {
+  font-size: 38px;
 }
 
 .popupCategory {
-  color: #666;
+  color: #555;
   text-transform: uppercase;
-  font-size: 14px;
 }
 
 .popupPrice {
-  font-size: 42px;
-  color: #333;
-  margin: 15px 0;
+  font-size: 48px;
 }
 
 .popupDescription {
-  line-height: 1.7;
-  color: #444;
-}
-
-.colors {
-  display: flex;
-  gap: 12px;
-  margin: 25px 0;
-}
-
-.black,
-.red {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  border: 2px solid #ccc;
+  color: #666;
 }
 
 .black {
-  background: #111;
+  background: black;
 }
 .red {
   background: crimson;
 }
 
 .popupButton {
-  padding: 14px 30px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 10px;
+  padding: 14px;
+  border: 2px solid black;
+  background: transparent;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.popupButton:hover {
-  background: #333;
 }
