@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-const LifeCycleInFBC = () => {
+const Products = () => {
   const [count, setCount] = useState(0);
   // const [intialRender, setintialRender] = useState(true); //not using this use ref instead to stop re rendering
 
@@ -28,4 +28,4 @@ const LifeCycleInFBC = () => {
   );
 };
 
-export default LifeCycleInFBC;
+export default Products;
