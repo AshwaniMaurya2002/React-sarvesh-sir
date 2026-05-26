@@ -45,18 +45,11 @@ const ProductPopup = ({ product, onClose }) => {
           CLOSE
         </button>
 
-        <img
-          src={product.images[0]}
-          alt={product.title}
-          className={styles.popupImage}
-        />
+        <img src={product.images[0]} className={styles.popupImage} />
 
-        <p className={styles.category}>{product.category}</p>
         <h2 className={styles.title}>{product.title}</h2>
-        <h3 className={styles.price}>${product.price}</h3>
+        <h3 className={styles.price}>{product.price} Rs</h3>
         <p className={styles.description}>{product.description}</p>
-        <p className={styles.rating}>⭐ Rating: {product.rating}</p>
-
         <button className={styles.addToCartBtn}>Add to Cart</button>
       </div>
     </div>
