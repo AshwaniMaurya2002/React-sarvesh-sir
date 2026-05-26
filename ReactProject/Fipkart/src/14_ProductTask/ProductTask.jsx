@@ -54,7 +54,6 @@ const ProductTask = () => {
                 {selectedProduct.description}
               </p>
 
-          
               <button className={styles.popupButton}>ADD TO CART</button>
             </div>
           </div>

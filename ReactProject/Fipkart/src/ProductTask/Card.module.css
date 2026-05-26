@@ -1,0 +1,118 @@
+.card {
+  width: 180px;
+  /* background: lightyellow; */
+  /* border: 3px solid purple; */
+  padding: 10px;
+  text-align: center;
+  font-family: "Comic Sans MS";
+}
+
+.imageContainer {
+  position: relative;
+  height: 120px;
+  /* background: purple; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px dashed red; */
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.heart {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 1px solid red;
+}
+
+.content {
+  padding: 8px;
+}
+
+.title {
+  color: black;
+  font-size: 13px;
+  font-family: "Comic Sans MS";
+  margin: 4px 0;
+}
+
+.meta {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.rating {
+  color: orange;
+  font-size: 11px;
+  background: #f1f1f1;
+  padding: 2px 6px;
+  border-radius: 10px;
+  /* border: 1px solid orange; */
+}
+
+.category {
+  color: black;
+  font-size: 11px;
+  background: #f1f1f1;
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.description {
+  font-size: 10px;
+  color: gray;
+  margin: 4px 0;
+  overflow: hidden;
+  height: 40px;
+  font-family: "Comic Sans MS";
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  /* border-top: 2px dashed red; */
+  padding-top: 8px;
+}
+
+.priceLabel {
+  font-size: 10px;
+  color: #999;
+  margin: 0;
+  font-family: "Comic Sans MS";
+}
+
+.price {
+  font-weight: bold;
+  color: bla;
+  font-size: 16px;
+  margin: 0;
+  font-family: "Comic Sans MS";
+}
+
+.addBtn {
+  background: red;
+  color: white;
+  padding: 5px 8px;
+  border: 2px solid black;
+  cursor: pointer;
+  font-family: "Comic Sans MS";
+  font-size: 11px;
+}
