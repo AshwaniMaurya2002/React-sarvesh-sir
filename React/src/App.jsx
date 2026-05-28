@@ -7,6 +7,8 @@ import Users from "./12_LifeCycle/Users";
 import Products from "./13_fetch/Products";
 import ProductTask from "./14_ProductTask/ProductTask";
 import Reducer from "./15_Reducer/Reducer";
+import Task from "./17_TODAY/Task";
+import { UserContextProvider } from "./17_TODAY/context/UserContextProvider";
 // import ControlledForm2 from "./allTopics/08- Forms/ControlledForm2";
 // import Employee from "./07_list/Employee";
 // import UserList from "./07_list/UserList";
@@ -35,7 +37,12 @@ const App = () => {
 
       {/* <ProductTask /> */}
 
-      <Reducer />
+      {/* <Reducer />
+       */}
+
+      <UserContextProvider>
+        <Task />
+      </UserContextProvider>
     </>
   );
 };
