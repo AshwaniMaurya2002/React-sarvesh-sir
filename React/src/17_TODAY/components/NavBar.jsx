@@ -1,9 +1,17 @@
-import React from "react";
 import { useContext } from "react";
 import { userContext } from "../context/UserContextProvider";
+import { data, useNavigate } from "react-router-dom";
 
-const NavBar = () => {
+const Navbar = () => {
   const { user } = useContext(userContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    const dataPresent = localStorage.getItem("user");
+    dataPresent ? localStorage.removeItem("user") : null;
+    navigate("/");
+  };
+
   return (
     <header
       style={{
@@ -19,7 +27,7 @@ const NavBar = () => {
         {user && (
           <>
             <span>{user.email}</span>
-            <button>Logout</button>
+            <button onClick={handleLogout}> Logout</button>
           </>
         )}
       </nav>
@@ -27,4 +35,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;

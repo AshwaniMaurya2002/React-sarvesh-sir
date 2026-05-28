@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 const Task = () => {
   return (
     <div>
-      <h1>Context task</h1>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
