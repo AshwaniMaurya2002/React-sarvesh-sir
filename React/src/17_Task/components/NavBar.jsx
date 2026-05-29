@@ -3,13 +3,15 @@ import { userContext } from "../context/UserContextProvider";
 import { data, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const { user } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    const dataPresent = localStorage.getItem("user");
-    dataPresent ? localStorage.removeItem("user") : null;
-    navigate("/");
+    if (confirm("Are You Sure")) {
+      localStorage.removeItem("user");
+      setUser(null);
+      navigate("/");
+    }
   };
 
   return (

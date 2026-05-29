@@ -4,11 +4,14 @@ import InlineCss from "./09_ReactCss/InlineCss";
 import LifeCycleInCBC from "./12_LifeCycle/LifeCycleInCBC";
 import LifeCycleInFBC from "./12_LifeCycle/LifeCycleInFBC";
 import Users from "./12_LifeCycle/Users";
-import Products from "./13_fetch/Products";
+// import Products from "./13_fetch/Products";
 import ProductTask from "./14_ProductTask/ProductTask";
 import Reducer from "./15_Reducer/Reducer";
-import Task from "./17_TODAY/Task";
-import { UserContextProvider } from "./17_TODAY/context/UserContextProvider";
+import Task from "./17_Task/Task";
+import { UserContextProvider } from "./17_Task/context/UserContextProvider";
+import Routing1 from "./18_Routing/Routing1";
+import Routing2 from "./18_Routing/Routing2";
+import Products from "./19_customHooks/Products";
 // import ControlledForm2 from "./allTopics/08- Forms/ControlledForm2";
 // import Employee from "./07_list/Employee";
 // import UserList from "./07_list/UserList";
@@ -40,9 +43,12 @@ const App = () => {
       {/* <Reducer />
        */}
 
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <Task />
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      {/* <Routing2 /> */}
+      <Products />
     </>
   );
 };
