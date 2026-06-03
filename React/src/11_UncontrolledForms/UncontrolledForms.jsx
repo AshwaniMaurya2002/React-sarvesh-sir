@@ -13,7 +13,6 @@ const UncontrolledForms = () => {
     };
 
     console.log(newUser);
-
     emailRef.current.value = "";
     passwordRef.current.value = "";
   };
