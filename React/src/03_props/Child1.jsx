@@ -7,6 +7,7 @@ const Child1 = ({ prop1, prop2, prop3 }) => {
       <p>{prop2}</p>
       <p>{prop3}</p>
     </>
+    
   );
 };
 
