@@ -1,5 +1,4 @@
 import style from "./CreateTodo.module.css";
-
 const CreateTodo = ({ todo, setTodo, handleCreateTodo, editTodoId }) => {
   return (
     <form className={style.todoForm} onSubmit={handleCreateTodo}>
