@@ -9,7 +9,6 @@ const TodoWrapper = () => {
     let todos = localStorage.getItem("todos");
     return todos ? JSON.parse(todos) : [];
   });
-
   const [editTodoId, setEditTodoID] = useState(null);
 
   console.log(allTodos);
