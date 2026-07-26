@@ -2,7 +2,6 @@ import style from "./TodoWrapper.module.css";
 import CreateTodo from "./CreateTodo/CreateTodo";
 import DisplayTodo from "./DisplayTodo/DisplayTodo";
 import { useState } from "react";
-
 const TodoWrapper = () => {
   const [todo, setTodo] = useState("");
   const [allTodos, setAllTodos] = useState(() => {
