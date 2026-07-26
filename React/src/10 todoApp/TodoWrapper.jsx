@@ -9,9 +9,7 @@ const TodoWrapper = () => {
     return todos ? JSON.parse(todos) : [];
   });
   const [editTodoId, setEditTodoID] = useState(null);
-
   console.log(allTodos);
-
   const handleCreateTodo = (e) => {
     e.preventDefault();
     console.log("Todo Created");
