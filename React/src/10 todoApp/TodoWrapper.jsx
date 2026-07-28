@@ -21,7 +21,6 @@ const TodoWrapper = () => {
         }
         return ele;
       });
-
       setAllTodos(updateTodos);
       localStorage.setItem("todos", JSON.stringify(updateTodos));
       setTodo(" ");
