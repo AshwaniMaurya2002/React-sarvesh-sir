@@ -13,7 +13,6 @@ const TodoWrapper = () => {
   const handleCreateTodo = (e) => {
     e.preventDefault();
     console.log("Todo Created");
-
     if (editTodoId) {
       const updateTodos = allTodos.map((ele) => {
         if (ele.id === editTodoId) {
